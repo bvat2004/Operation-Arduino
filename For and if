@@ -1,0 +1,21 @@
+void setup() {
+  pinMode(13, OUTPUT);
+  pinMode(5, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(13, HIGH); // set the LED on
+  for (int x=0; x < 1000; x++) { // wait for a secoond
+    delay(1);
+    if (x==500) {
+      digitalWrite(5, HIGH);
+    }
+  }
+  digitalWrite(13, LOW); // set the LED off
+  for (int x=0; x < 1000; x++) { // wait for a secoond
+    delay(1);
+    if (x==500) {
+      digitalWrite(5, LOW);
+    }
+  }
+}
